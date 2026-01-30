@@ -996,6 +996,23 @@ section {
       top: 28px
     }
 
+    .pricing-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pricing-card.vip {
+        order: 1;
+    }
+
+    .pricing-card.fast-plan {
+        order: 2;
+    }
+
+    .pricing-card.low-plan {
+        order: 3;
+    }
+
     .payment-security {
       flex-direction: column;
       gap: 6px;
