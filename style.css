@@ -434,7 +434,7 @@ section {
 /* ===== ECOSYSTEM SECTION ===== */
 .ecosystem-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 16px;
 }
 
@@ -540,6 +540,7 @@ section {
 .note {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     padding: 16px 20px;
     background: var(--bg-card);
@@ -579,8 +580,8 @@ section {
 
 .card-ribbon {
     position: absolute;
-    top: 20px;
-    right: -35px;
+    top: 29px;
+    right: -38px;
     padding: 6px 40px;
     background: var(--gradient-main);
     font-size: 0.7rem;
@@ -769,11 +770,14 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     padding: 24px 40px;
     background: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
+    min-width: 215px;
+    min-height: 140px;
 }
 
 .payment-icon {
@@ -934,7 +938,7 @@ section {
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     section {
         padding: 60px 0;
     }
@@ -948,8 +952,65 @@ section {
         gap: 20px;
     }
 
+    .hero-title {
+      font-size: clamp(3.2rem,5vw,3.8rem);
+    }
+
+    .problem-icon, .problem-card h3,
+    .desire-icon, .desire-card h3, .desire-text {
+      text-align: center;
+    }
+
+    .desire-features {
+        justify-content: center;
+    }
+
+    .benefits-highlight {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .benefits-highlight {
+      justify-content: center;
+    }
+
+    .mode-header {
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .mode-features {
+      text-align: center;
+    }
+
+    .note {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .note p {
+      text-align: center;
+    }
+
+    .card-ribbon {
+      top: 28px
+    }
+
+    .payment-security {
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .payment-security p {
+      font-size: 14px;
+    }
+
     .stat-divider {
         display: none;
+    }
+
+    .ecosystem-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .problems-grid,
