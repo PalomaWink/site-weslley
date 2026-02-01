@@ -1,5 +1,33 @@
 // FAQ Accordion
 document.addEventListener('DOMContentLoaded', () => {
+    // Popup de Aviso - Aparece após 4 segundos até 05/02/2026
+    setTimeout(() => {
+        const popup = document.getElementById('warningPopup');
+        const closeBtn = document.getElementById('closePopup');
+        
+        // Verificar se a data atual é antes de 05/02/2026
+        const currentDate = new Date();
+        const endDate = new Date('2026-02-05T23:59:59');
+        
+        if (currentDate <= endDate && popup) {
+            popup.classList.add('show');
+        }
+        
+        // Fechar popup ao clicar no botão
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+                popup.classList.remove('show');
+            });
+        }
+        
+        // Fechar popup ao clicar fora do container
+        popup?.addEventListener('click', (e) => {
+            if (e.target === popup) {
+                popup.classList.remove('show');
+            }
+        });
+    }, 4000); // 4 segundos
+
     const faqItems = document.querySelectorAll('.faq-item');
     
     faqItems.forEach(item => {
