@@ -594,6 +594,19 @@ section {
     box-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
 }
 
+.card-ribbon.out-of-stock {
+    position: absolute;
+    top: 29px;
+    left: -38px;
+    padding: 6px 40px;
+    background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+    font-size: 0.7rem;
+    font-weight: 700;
+    transform: rotate(-45deg);
+    box-shadow: 0 0 15px rgba(220, 38, 38, 0.5);
+    right: auto;
+}
+
 .card-header {
     margin-bottom: 24px;
 }

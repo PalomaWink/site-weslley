@@ -1,15 +1,11 @@
 // FAQ Accordion
 document.addEventListener('DOMContentLoaded', () => {
-    // Popup de Aviso - Aparece após 4 segundos até 05/02/2026
+    // Popup de Aviso - Aparece após 4 segundos
     setTimeout(() => {
         const popup = document.getElementById('warningPopup');
         const closeBtn = document.getElementById('closePopup');
         
-        // Verificar se a data atual é antes de 05/02/2026
-        const currentDate = new Date();
-        const endDate = new Date('2026-02-05T23:59:59');
-        
-        if (currentDate <= endDate && popup) {
+        if (popup) {
             popup.classList.add('show');
         }
         
